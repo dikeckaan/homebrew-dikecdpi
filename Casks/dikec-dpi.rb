@@ -7,18 +7,18 @@ cask "dikec-dpi" do
   desc "DPI engellerini aşan, kendi kendini ayarlayan proxy uygulaması"
   homepage "https://github.com/dikeckaan/DikecDPI"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Dikec DPI.app"
 
-  # The app is ad-hoc signed but not notarized; without this macOS refuses
-  # to open it ("developer cannot be verified").
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Dikec DPI.app"]
-  end
-
   uninstall quit: "com.dikec.dpi"
+
+  caveats <<~EOS
+    Dikec DPI henüz Apple tarafından onaylanmadı (notarize edilmedi).
+    İlk açılışta macOS uyarı verirse:
+      Sistem Ayarları → Gizlilik ve Güvenlik → "Yine de Aç"
+    Bu yalnızca bir kez gerekir.
+  EOS
 
   zap trash: [
     "~/Library/Application Support/DikecDPI",
