@@ -1,6 +1,6 @@
 cask "dikec-dpi" do
-  version "1.0.0"
-  sha256 "6627413477b59acc17382534b6561ac37e2b83287a6f68d79b17902f627a8d3d"
+  version "1.1.0"
+  sha256 "fb94403934c1434a48c5a365b99aacff18840cebf4c45c33385a91b7797f59e5"
 
   url "https://github.com/dikeckaan/DikecDPI/releases/download/v#{version}/DikecDPI-#{version}-macos-universal.zip"
   name "Dikec DPI"
