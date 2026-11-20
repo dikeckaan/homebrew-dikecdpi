@@ -1,8 +1,8 @@
 class Dikecdpi < Formula
   desc "DPI engellerini aşan, kendi kendini ayarlayan proxy (SpoofDPI tabanlı)"
   homepage "https://github.com/dikeckaan/DikecDPI"
-  url "https://github.com/dikeckaan/DikecDPI/archive/refs/tags/v1.3.3.tar.gz"
-  sha256 "ed77489483ce54702e9039c9ed05c24f91d79a9fc5fc36ec07aef09461c633b0"
+  url "https://github.com/dikeckaan/DikecDPI/archive/refs/tags/v1.3.4.tar.gz"
+  sha256 "cef91a8c7b6a483b08cb4a38d3c6b9d80e9c7afe26da0ce771d312c51f8e93a6"
   license "Apache-2.0"
   head "https://github.com/dikeckaan/DikecDPI.git", branch: "main"
 
